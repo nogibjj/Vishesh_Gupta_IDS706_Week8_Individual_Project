@@ -1,1 +1,0 @@
-{"buildTargets":["all","extract","format","generate_and_push","install","lint","load","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

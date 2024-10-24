@@ -1,36 +1,44 @@
+rust-version:
+	@echo "Rust command-line utility versions:"
+	rustc --version 			#rust compiler
+	cargo --version 			#rust package manager
+	rustfmt --version			#rust code formatter
+	rustup --version			#rust toolchain manager
+	clippy-driver --version		#rust linter
+
+format:
+	cargo fmt --quiet
+
 install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	# Install if needed
+	#@echo "Updating rust toolchain"
+	#rustup update stable
+	#rustup default stable 
 
 lint:
-	ruff check *.py
-
-format:	
-	black *.py 
+	cargo clippy --quiet
 
 test:
-	python -m pytest -cov=main main_test.py
-		
-all: install lint format test
+	cargo test --quiet
 
-generate_and_push:
-	# Create the markdown file 
-	python main_test.py  # Replace with the actual command to generate the markdown
+run:
+	cargo run
 
-	# Add, commit, and push the generated files to GitHub
-	@if [ -n "$$(git status --porcelain)" ]; then \
-		git config --local user.email "action@github.com"; \
-		git config --local user.name "GitHub Action"; \
-		git add .; \
-		git commit -m "Add SQL log as test_results.md"; \
-		git push; \
-	else \
-		echo "No changes to commit. Skipping commit and push."; \
-	fi
+release:
+	cargo build --release
 
+all: format lint test run
 
-extract:
-	python python_main.py extract
+extract: 
+	cargo run extract
 
-load: 
-	python python_main.py load
+load:
+	cargo run load
+
+# Read 
+read:
+	cargo run -- query "SELECT * FROM MatchResultsDB LIMIT 10;"
+
+# Delete
+delete:
+	cargo run -- query "DELETE FROM MatchResultsDB WHERE Round = 10;"  
