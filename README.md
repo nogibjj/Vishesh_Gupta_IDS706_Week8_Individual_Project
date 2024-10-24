@@ -64,3 +64,4 @@ These commands will allow you to extract, load, and query data within the SQLite
 ![Test Image 3](Rust_Delete.png)
 
 ## Youtube Video
+[click here](https://youtu.be/44Nw-jnQYmM)
