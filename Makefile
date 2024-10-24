@@ -36,7 +36,7 @@ load:
 	cargo run load
 # Read 
 read:
-	cargo run -- query "SELECT * FROM MatchResultsDB LIMIT 10;"
+	cargo run -- query "SELECT * FROM MatchResultsDB ORDER BY Round DESC LIMIT 5;"
 # Delete
 delete:
 	cargo run -- query "DELETE FROM MatchResultsDB WHERE Round = 10;"  

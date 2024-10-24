@@ -25,6 +25,7 @@ pub fn extract(url: &str, file_path: &str, directory: &str) {
     let mut response = client.get(url).send().expect("Failed to send request");
     let mut file = fs::File::create(file_path).expect("Failed to create file");
 
+
     std::io::copy(&mut response, &mut file).expect("Failed to copy content");
 
     println!("Extraction successful!");
