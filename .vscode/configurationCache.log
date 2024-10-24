@@ -1,0 +1,1 @@
+{"buildTargets":["all","delete","extract","format","install","lint","load","read","release","run","rust-version","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
