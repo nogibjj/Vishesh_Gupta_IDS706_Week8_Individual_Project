@@ -29,4 +29,12 @@ jobs:
       run: make lint
     - name: Test
       run: make test
+    - name: Insert
+      run: make insert 
+    - name: Update 
+      run: make update
+    - name: Read
+      run: make read  
+    - name: Delete 
+      run: make delete
       

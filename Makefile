@@ -34,11 +34,15 @@ extract:
 
 load:
 	cargo run load
-
 # Read 
 read:
 	cargo run -- query "SELECT * FROM MatchResultsDB LIMIT 10;"
-
 # Delete
 delete:
 	cargo run -- query "DELETE FROM MatchResultsDB WHERE Round = 10;"  
+# Insert
+insert:
+	cargo run -- query "INSERT INTO MatchResultsDB (Round, Date, \"Team 1\", \"Team 2\", FT) VALUES (101, '2024-10-24', 'Team A', 'Team B', '2-1');"
+# Update
+update:
+	cargo run -- query "UPDATE MatchResultsDB SET \"Team 1\" = 'MIDS' WHERE \"Team 1\" = 'Team A';"

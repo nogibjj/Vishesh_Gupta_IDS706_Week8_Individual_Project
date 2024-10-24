@@ -94,3 +94,27 @@ UPDATE MatchResultsDB SET "Team 1" = 'MIDS' WHERE "Team 1" = 'Team A';
 SELECT * FROM MatchResultsDB ORDER BY Round DESC LIMIT 5;
 ```
 
+```sql
+SELECT * FROM MatchResultsDB ORDER BY Round DESC LIMIT 5;
+```
+
+```sql
+INSERT INTO MatchResultsDB (Round, Date, "Team 1", "Team 2", FT) VALUES (101, '2024-10-24', 'Team A', 'Team B', '2-1');
+```
+
+```sql
+UPDATE MatchResultsDB SET "Team 1" = 'MIDS' WHERE "Team 1" = 'Team A';
+```
+
+```sql
+SELECT * FROM MatchResultsDB ORDER BY Round DESC LIMIT 5;
+```
+
+```sql
+DELETE FROM MatchResultsDB WHERE Round = 9;
+```
+
+```sql
+SELECT * FROM MatchResultsDB WHERE Round = 9;
+```
+
