@@ -66,3 +66,31 @@ SELECT * FROM MatchResultsDB WHERE 'Team 1' = 'Team A'
 SELECT * FROM MatchResultsDB WHERE 'Team 1' = 'Sunderland AFC'
 ```
 
+```sql
+INSERT INTO MatchResultsDB (Round, Date, "Team 1", "Team 2", FT) VALUES (101, '2024-10-24', 'Team A', 'Team B', '2-1');
+```
+
+```sql
+SELECT COUNT(*) FROM MatchResultsDB WHERE Round = 101;
+```
+
+```sql
+SELECT DISTINCT Round FROM MatchResultsDB;
+```
+
+```sql
+SELECT * FROM MatchResultsDB;
+```
+
+```sql
+SELECT * FROM MatchResultsDB ORDER BY Round DESC LIMIT 5;
+```
+
+```sql
+UPDATE MatchResultsDB SET "Team 1" = 'MIDS' WHERE "Team 1" = 'Team A';
+```
+
+```sql
+SELECT * FROM MatchResultsDB ORDER BY Round DESC LIMIT 5;
+```
+
