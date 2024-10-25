@@ -63,5 +63,15 @@ These commands will allow you to extract, load, and query data within the SQLite
 
 ![Test Image 3](Rust_Delete.png)
 
+## Utilizing an LLM for Learning and Code Conversion
+
+In the development of this Rust-based CLI application, I leveraged a Large Language Model (LLM) to aid in understanding Rust’s syntax and structure. As someone new to Rust, I sought to gain familiarity by taking an existing demo project and working through it line-by-line. The LLM provided crucial guidance during this initial phase, helping me to:
+
+- **Adapt Familiar Logic into Rust**: With each line, the LLM provided explanations on how concepts familiar in other languages—such as loops, conditional checks, and data structures—are implemented in Rust. It also suggested alternative idiomatic approaches, ensuring the code followed Rust's best practices.
+
+- **Gain Confidence for New Code**: By understanding the syntactical differences and idiomatic Rust through these guided conversions, I was able to move from simple translations to writing new functionality independently. For instance, I extended the CRUD operations to handle multiple data types and provided additional error handling, a skill I honed through LLM-assisted learning.
+
+By incorporating the LLM in this project, I was able to quickly overcome the Rust learning curve, allowing me to focus more on building features rather than purely syntax troubleshooting. This experience underscores the LLM’s utility as a coding companion, supporting both syntax learning and code creation.
+
 ## Youtube Video
 [click here](https://youtu.be/44Nw-jnQYmM)
